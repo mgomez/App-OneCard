@@ -43,7 +43,7 @@ document.addEventListener('deviceready', onDeviceReady, false);
             }
             if(networkState != 'none' ){
                 navigator.vibrate(1000);            
-                var win = window.open("https://www.onecardservicios.mx/Extranet/AppOneCard/");                          
+                var win = window.open("https://www.onecardservicios.mx/Extranet/AppOneCard/Account/Login", "_blank", "location=no,clearsessioncache=yes");            
             }else{
                 navigator.notification.alert(
                     'No esta conectado a una red Wifi',
