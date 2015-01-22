@@ -36,14 +36,14 @@ document.addEventListener('deviceready', onDeviceReady, false);
                     navigator.notification.alert(
                         message,    
                         null,       
-                        "SmartInvoice", 
+                        "OneCard", 
                         'OK'        
                     );
                 };
             }
             if(networkState != 'none' ){
                 navigator.vibrate(1000);            
-                var win = window.open("https://www.onecardservicios.mx/Extranet/AppOneCard/Account/Login", "_blank", "location=no,clearsessioncache=yes");            
+                var win = window.open("https://www.onecardservicios.mx/Extranet/AppOneCard/Account/Login");            
             }else{
                 navigator.notification.alert(
                     'No esta conectado a una red Wifi',
