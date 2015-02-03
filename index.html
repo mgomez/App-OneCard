@@ -29,16 +29,9 @@ var ios = isMobile.apple.device;
 var phone = isMobile.phone;
 var pushNotification;
 var networkState;
-
 document.addEventListener('deviceready', onDeviceReady, false);
 
 function onDeviceReady() {
-    if (typeof CDV === 'undefined') {
-        alert('CDV variable does not exist. Check that you have included cdv-plugin-fb-connect.js correctly');
-    }
-    if (typeof FB === 'undefined') {
-        alert('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
-    }
     networkState = navigator.connection.type;
     if (navigator.notification) {
         window.alert = function(message) {
@@ -60,39 +53,81 @@ function onDeviceReady() {
         }, 2000);
     }
     //Login Facebook
-    try {
-        FB.init({
-            appId: "348393422017579",
-            nativeInterface: CDV.FB,
-            useCachedDialogs: false
+    var login = function() {
+        if (!window.cordova) {
+            var appId = prompt("Enter FB Application ID", "");
+            facebookConnectPlugin.browserInit(appId);
+        }
+        facebookConnectPlugin.login(["email"], function(response) {
+            alert(JSON.stringify(response))
+        }, function(response) {
+            alert(JSON.stringify(response))
         });
-    } catch (e) {
-        alert(e);
-    }    
-    //facebookConnectPlugin.browserInit("348393422017579");
-    //facebookConnectPlugin.login(Array strings of permissions, Function (success){console.log(success)}, Function (failure){console.log(failure)});
-    //var fbLoginSuccess = function (userData) {
-        //alert("UserInfo: " + JSON.stringify(userData));
-        //console.log(userData);
-    //}
-    //facebookConnectPlugin.login(["public_profile"],
-        //fbLoginSuccess,
-        //function (error) { alert("" + error);console.log(error); }
-    //);    
+    }
+    var showDialog = function() {
+        facebookConnectPlugin.showDialog({
+            method: "feed"
+        }, function(response) {
+            alert(JSON.stringify(response))
+        }, function(response) {
+            alert(JSON.stringify(response))
+        });
+    }
+    var apiTest = function() {
+        facebookConnectPlugin.api("me/?fields=id,email", ["user_birthday"], function(response) {
+            alert(JSON.stringify(response))
+        }, function(response) {
+            alert(JSON.stringify(response))
+        });
+    }
+    var logPurchase = function() {
+        facebookConnectPlugin.logPurchase(1.99, "USD", function(response) {
+            alert(JSON.stringify(response))
+        }, function(response) {
+            alert(JSON.stringify(response))
+        });
+    }
+    var logEvent = function() {
+        // For more information on AppEvent param structure see
+        // https://developers.facebook.com/docs/ios/app-events
+        // https://developers.facebook.com/docs/android/app-events
+        facebookConnectPlugin.logEvent("Purchased", {
+            NumItems: 1,
+            Currency: "USD",
+            ContentType: "shoes",
+            ContentID: "HDFU-8452"
+        }, null, function(response) {
+            alert(JSON.stringify(response))
+        }, function(response) {
+            alert(JSON.stringify(response))
+        });
+    }
+    var getAccessToken = function() {
+        facebookConnectPlugin.getAccessToken(function(response) {
+            alert(JSON.stringify(response))
+        }, function(response) {
+            alert(JSON.stringify(response))
+        });
+    }
+    var getStatus = function() {
+        facebookConnectPlugin.getLoginStatus(function(response) {
+            alert(JSON.stringify(response))
+        }, function(response) {
+            alert(JSON.stringify(response))
+        });
+    }
+    var logout = function() {
+        facebookConnectPlugin.logout(function(response) {
+            alert(JSON.stringify(response))
+        }, function(response) {
+            alert(JSON.stringify(response))
+        });
+    }
 }
 var loginButton = $('#login-with-facebook');
- 
 loginButton.on('click', function(e) {
     e.preventDefault();
- 
-    FB.login(function(response) {
-        if (response.status === 'connected') {
-            alert('logged in');
-        } else {
-            alert('not logged in');
-        }
-    },{ scope: "email" });
- 
+    login();
 });       
         </script>
     </body>
