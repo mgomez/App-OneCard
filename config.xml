@@ -68,4 +68,8 @@
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.vibration" />  
     <gap:plugin name="com.phonegap.plugins.pushplugin" version="2.4.0" />  
+    <gap:plugin name="com.phonegap.plugins.facebookconnect">
+        <param name="APP_ID" value="348393422017579" />
+        <param name="APP_NAME" value="OneCar" />
+    </gap:plugin>
 </widget>
