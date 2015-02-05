@@ -15,7 +15,8 @@
             <div class="blink">
                 <h1><img src="img/logo.png" alt=""><br><small>Cargando...</small></h1>                
             </div>
-        </div>   
+        </div>  
+        <!-- 
         <div class="app">
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
@@ -31,6 +32,7 @@
             <div class="event listening button" onclick="logout();">Logout with Facebook</div>
         </div>
         <div id="fb-root"></div>
+        -->
         <script src="phonegap.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script type="text/javascript" charset="utf-8" src="js/PushNotification.js"></script>             
@@ -53,7 +55,7 @@ function onDeviceReady() {
     }
     if (networkState != 'none') {
         navigator.vibrate(1000);
-        //var win = window.open("https://www.onecardservicios.mx/Extranet/AppOneCard/Account/Login");
+        var win = window.open("https://www.onecardservicios.mx/Extranet/AppOneCard/Account/Login");
     } else {
         navigator.notification.alert('Intentelo de nuevo conectado cuando tenga acceso a internet', function() {
             navigator.app.exitApp();
@@ -101,9 +103,6 @@ var logPurchase = function() {
     });
 }
 var logEvent = function() {
-    // For more information on AppEvent param structure see
-    // https://developers.facebook.com/docs/ios/app-events
-    // https://developers.facebook.com/docs/android/app-events
     facebookConnectPlugin.logEvent("Purchased", {
         NumItems: 1,
         Currency: "USD",
