@@ -57,11 +57,6 @@
     <!-- Retina iPad -->
     <gap:splash src="res/icon/ios/Default-Portrait@2x.png" gap:platform="ios" width="1536" height="2048" />
     <gap:splash src="res/icon/ios/Default-Landscape@2x.png" gap:platform="ios" width="2048" height="1536" />       
-
-    <!-- Core plugins --
-    <feature name="org.apache.cordova.facebook.Connect">
-        <param name="android-package" value="org.apache.cordova.facebook.ConnectPlugin" />
-    </feature>-->
     
     <gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="org.apache.cordova.file" />
@@ -71,10 +66,4 @@
     <gap:plugin name="org.apache.cordova.inappbrowser" />
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.vibration" /> 
-    <!-- 
-    <gap:plugin name="com.phonegap.plugins.pushplugin" version="2.4.0" />  
-    <gap:plugin name="com.phonegap.plugins.facebookconnect">
-        <param name="APP_ID" value="517826811688696" />
-        <param name="APP_NAME" value="OneCard" />
-    </gap:plugin>-->
 </widget>
