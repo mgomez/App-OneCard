@@ -2,7 +2,7 @@
 <widget xmlns= "http://www.w3.org/ns/widgets"
         xmlns:gap= "http://phonegap.com/ns/1.0"
         id= "com.oc.onecard"
-        version= "0.1.0">
+        version= "0.2.0">
 
     <name>OneCard</name>
     <description>App de OneCard</description>
@@ -58,10 +58,10 @@
     <gap:splash src="res/icon/ios/Default-Portrait@2x.png" gap:platform="ios" width="1536" height="2048" />
     <gap:splash src="res/icon/ios/Default-Landscape@2x.png" gap:platform="ios" width="2048" height="1536" />       
 
-<!-- Core plugins -->
+    <!-- Core plugins --
     <feature name="org.apache.cordova.facebook.Connect">
         <param name="android-package" value="org.apache.cordova.facebook.ConnectPlugin" />
-    </feature>
+    </feature>-->
     
     <gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="org.apache.cordova.file" />
@@ -70,10 +70,11 @@
     <gap:plugin name="org.apache.cordova.dialogs" />
     <gap:plugin name="org.apache.cordova.inappbrowser" />
     <gap:plugin name="org.apache.cordova.network-information" />
-    <gap:plugin name="org.apache.cordova.vibration" />  
+    <gap:plugin name="org.apache.cordova.vibration" /> 
+    <!-- 
     <gap:plugin name="com.phonegap.plugins.pushplugin" version="2.4.0" />  
     <gap:plugin name="com.phonegap.plugins.facebookconnect">
         <param name="APP_ID" value="517826811688696" />
         <param name="APP_NAME" value="OneCard" />
-    </gap:plugin>
+    </gap:plugin>-->
 </widget>
