@@ -18,7 +18,7 @@ function onDeviceReady() {
     }
     if (networkState != 'none') {
         navigator.vibrate(1000);
-        var win = window.open("https://www.onecardservicios.mx/Extranet/AppOneCard/Account/Login");
+        var win = window.open("https://www.onecardservicios.mx/Extranet/AppOneCardTest/");
     } else {
         navigator.notification.alert('Intentelo de nuevo conectado cuando tenga acceso a Internet', function() {
             navigator.app.exitApp();
