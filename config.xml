@@ -17,7 +17,6 @@
     <preference name="DisallowOverscroll"       value="true"/> 
     <preference name="Orientation"              value="portrait" />
     <preference name="HideKeyboardFormAccessoryBar" value="false"/>
-    <preference name="BackgroundColor" value="0xff0000ff"/>
     <preference name="stay-in-webview"          value="true" />
     <preference name="ios-statusbarstyle"       value="black-opaque" />
 
