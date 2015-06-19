@@ -23,7 +23,7 @@
             networkState = navigator.connection.type;
             if (networkState != 'none') {
                 navigator.vibrate(1000);
-                var win = window.open("http://www.onecardservicios.mx/Extranet/AppOneCard/");
+                var win = window.open("http://192.168.31.103/Extranet/AppOneCard/");
             } else {
                 navigator.notification.alert('Intentelo de nuevo conectado cuando tenga acceso a Internet', function() {
                     navigator.app.exitApp();
