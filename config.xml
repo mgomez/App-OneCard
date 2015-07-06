@@ -62,7 +62,6 @@
     <gap:splash src="res/icon/ios/Default-Landscape@2x.png" gap:platform="ios" width="2048" height="1536" />       
     
     <gap:plugin name="org.apache.cordova.dialogs" />
-    <gap:plugin name="org.apache.cordova.inappbrowser" />
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.vibration" /> 
     <gap:plugin name='org.crosswalk.engine' version='1.3.0' source='pgb' />
