@@ -1,35 +1,72 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <meta name="viewport" content="width=device-width, user-scalable=no">
-        <link rel="stylesheet" type="text/css" href="css/index.min.css" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <title>OneCard</title>        
-    </head>
-    <body>
-        <div id="ocsi">            
-            <div class="blink">
-                <h1><img src="img/logo.png" alt=""><br><small>Cargando...</small></h1>                
-            </div>
-        </div> 
-        <script src="cordova.js"></script>
-        <script>
-        document.addEventListener('deviceready', onDeviceReady, false);
 
-        function onDeviceReady() {
-            networkState = navigator.connection.type;
-            if (networkState != 'none') {
-                navigator.vibrate(1000);
-                var win = window.open("http://test.ocsi.mx/Extranet/AppOneCard/");
-            } else {
-                navigator.notification.alert('Intentelo de nuevo conectado cuando tenga acceso a Internet', function() {
-                    navigator.app.exitApp();
-                }, 'OneCard', 'Ok');
-            }
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/index.min.css" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>OneCard</title>
+</head>
+
+<body>
+    <div id="ocsi">
+        <div class="blink">
+            <h1><img src="img/logo.png" alt=""><br><small>Cargando...</small></h1>
+        </div>
+    </div>
+    <script src="cordova.js"></script>
+    <script>
+    document.addEventListener('deviceready', onDeviceReady, false);
+
+    function onDeviceReady() {
+        window.open = cordova.InAppBrowser.open;
+        document.addEventListener("offline", onOffline, false);
+        document.addEventListener("online", online, false);
+
+        if (navigator.notification) {
+            window.alert = function(message) {
+                navigator.notification.alert(
+                    message,
+                    null,
+                    "OneCard",
+                    'OK'
+                );
+            };
         }
-        </script>
-    </body>
+        networkState = navigator.connection.type;
+
+        if (networkState != 'none') {
+            var win = window.open("https://www.onecardservicios.mx/Extranet/AppOneCard/", '_self', 'location=yes');
+        } else {
+            navigator.notification.alert(
+                'No esta conectado a una red Wifi',
+                function() {
+                    navigator.app.exitApp();
+                },
+                'OneCard',
+                'Ok'
+            );
+        }
+
+        if (device.platform != "Android") {
+            setTimeout(function() {
+                navigator.splashscreen.hide();
+            }, 2000);
+        }
+
+        function online() {
+            connectionStatus = true;
+        }
+
+        function onOffline() {
+            connectionStatus = false;
+            alert("Sin Internet");
+        }
+    }
+    </script>
+</body>
+
 </html>
