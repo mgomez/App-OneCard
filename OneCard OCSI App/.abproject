@@ -1,8 +1,0 @@
-{
-  "ProjectName": "OneCard OCSI App",
-  "ProjectGuid": "23a41738-44c6-49cc-b910-5230b544b344",
-  "projectVersion": 1,
-  "ProjectTypeGuids": "{da2f9169-4696-40a5-919b-f73985228cac}",
-  "FrameworkVersion": "0.0.1",
-  "Framework": "MobileWebsite"
-}
