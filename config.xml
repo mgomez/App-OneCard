@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.oc.onecard" version="2.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.oc.onecard" version="2.1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>OneCard</name>
     <description>App de OneCard</description>
     <author email="00.13.zkr@gmail.com" href="http://onecard.mx/">
@@ -7,7 +7,6 @@
     </author>
     <preference name='phonegap-version' value='cli-8.0.0' />
     <content src="index.html" />
-    <preference name="android-build-tool" value="gradle" />
     <preference name="android-installLocation" value="auto" />
     <preference name="android-minSdkVersion" value="14" />
     <preference name="auto-hide-splash-screen" value="true" />
@@ -36,10 +35,10 @@
         <gap:plugin name="cordova-plugin-customurlscheme" source="npm">
             <param name="URL_SCHEME" value="onecard" />
         </gap:plugin>
-        <plugin name="cordova-plugin-ionic-keyboard" />
     -->
     <plugin name="cordova-plugin-splashscreen" spec="5.0.1" />
     <plugin name="cordova-plugin-network-information" spec="2.0.1" />
+    <plugin name="cordova-plugin-ionic-keyboard" />
     <plugin name="phonegap-plugin-push" source="npm" spec="~1.9.1">
         <param name="SENDER_ID" value="678355429347" />
     </plugin>
