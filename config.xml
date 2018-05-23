@@ -20,7 +20,7 @@
     <preference name="stay-in-webview" value="true" />
     <preference name="target-device" value="universal" />
     <preference name="webviewbounce" value="true" />
-    <preference name="permissions" value="none" />
+    
     <!--PLUGINS-->
     <plugin name="cordova-plugin-vibration" spec="~3.1.0" />
     <plugin name="cordova-plugin-dialogs" spec="~2.0.1" />
