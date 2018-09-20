@@ -33,7 +33,7 @@
     <plugin name="phonegap-plugin-push" source="npm" spec="~1.9.1">
         <param name="SENDER_ID" value="678355429347" />
     </plugin>
-    <gap:plugin name="com.adobe.plugins.gaplugin" />
+    <plugin name="cordova-plugin-google-analytics" source="npm" />
     <icon src="icon.png" />
     <platform name="ios">
         <allow-intent href="itms:*" />
