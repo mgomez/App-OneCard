@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "678355429347",
+    "firebase_url": "https://app-onecard.firebaseio.com",
+    "project_id": "app-onecard",
+    "storage_bucket": "app-onecard.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678355429347:android:94c91b38559a2823",
+        "android_client_info": {
+          "package_name": "com.oc.onecard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "678355429347-ia8rb3dqv4hie7g09rp9191q2stpf68g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7jt5RU-d7I-ywDbIjWD1IULWfw_XmlBc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "678355429347-ia8rb3dqv4hie7g09rp9191q2stpf68g.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "678355429347-efurhdqti4j5669f17ju6h90hdmipfl0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "oc.onecard",
+                "app_store_id": "961694908"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
