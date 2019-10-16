@@ -42,6 +42,13 @@
     <plugin name="phonegap-plugin-push" source="npm">
         <param name="SENDER_ID" value="678355429347" source="npm" />
     </plugin>
+    <plugin name="cordova-plugin-x-socialsharing" source="npm" version="5.4.0" />
+    <feature name="SocialSharing">
+        <param name="android-package" value="nl.xservices.plugins.SocialSharing" />
+    </feature>
+    <feature name="SocialSharing">
+        <param name="ios-package" value="SocialSharing" />
+    </feature>
     <icon src="icon.png" />
     <platform name="ios">
         <resource-file src="GoogleService-Info.plist" target="app/GoogleService-Info.plist" />
