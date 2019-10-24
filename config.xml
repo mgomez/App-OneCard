@@ -40,7 +40,7 @@
     <plugin name="cordova-plugin-splashscreen" source="npm" />
     <plugin name="cordova-plugin-touch-id" source="npm" />
     <plugin name="cordova-plugin-whitelist" source="npm" />
-    <plugin name="phonegap-plugin-push" source="npm">
+    <plugin name="phonegap-plugin-push" source="npm" spec="2.2.3">
         <param name="SENDER_ID" value="678355429347" source="npm" />
     </plugin>
     <!--
