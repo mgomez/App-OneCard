@@ -29,6 +29,29 @@
     <preference name="stay-in-webview" value="true" />
     <preference name="target-device" value="universal" />
     <preference name="webviewbounce" value="true" />
+    <!--PLUGINS-->
+    <plugin name="cordova-support-google-services" version="1.1.0" />
+    <plugin name="cordova-plugin-android-fingerprint-auth" source="npm" />
+    <plugin name="cordova-plugin-device" source="npm" />
+    <plugin name="cordova-plugin-vibration" source="npm" />
+    <plugin name="cordova-plugin-dialogs" source="npm" />
+    <plugin name="cordova-plugin-native-keyboard" source="npm" />
+    <plugin name="cordova-plugin-network-information" />
+    <plugin name="cordova-plugin-splashscreen" source="npm" />
+    <plugin name="cordova-plugin-touch-id" source="npm" />
+    <plugin name="cordova-plugin-whitelist" source="npm" />
+    <plugin name="phonegap-plugin-push" source="npm">
+        <param name="SENDER_ID" value="678355429347" source="npm" />
+    </plugin>
+    <!--
+    <plugin name="cordova-plugin-x-socialsharing" source="npm" version="5.4.0" />
+    <feature name="SocialSharing">
+        <param name="android-package" value="nl.xservices.plugins.SocialSharing" />
+    </feature>
+    <feature name="SocialSharing">
+        <param name="ios-package" value="SocialSharing" />
+    </feature>
+    -->
     <icon src="icon.png" />
     <platform name="ios">
         <resource-file src="GoogleService-Info.plist" target="app/GoogleService-Info.plist" />
