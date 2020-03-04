@@ -29,14 +29,11 @@
     <preference name="target-device" value="universal" />
     <preference name="webviewbounce" value="true" />
     <preference name='phonegap-version' value='cli-9.0.0' />
-    <preference name="UseSwiftLanguageVersion" value="5" />
     <!--preference/iOS-->
     <preference name="KeyboardResize" value="true" />
     <preference name="KeyboardStyle" value="dark" />
     <preference name="KeyboardResizeMode" value="body" />
     <!--PLUGINS-->
-    <plugin name="cordova-plugin-add-swift-support" source="npm" />
-    <plugin name="cordova-plugin-theme-detection" source="npm" />
     <plugin name="cordova-plugin-android-fingerprint-auth" source="npm" />
     <plugin name="cordova-plugin-device" source="npm" />
     <plugin name="cordova-plugin-dialogs" source="npm" />
