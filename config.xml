@@ -118,7 +118,7 @@
     <allow-intent href="geo:*" />
     <engine name="ios" spec="^4.5.4" />
     <engine name="android" spec="^7.0.0" />
-    <config-file parent="UIUserInterfaceStyle" platform="ios" target="*-Info.plist">
+    <config-file parent="UIUserInterfaceStyle" platform="ios" target="*-Info.plist" mode="merge">
         <string>Light</string>
     </config-file>
 </widget>
