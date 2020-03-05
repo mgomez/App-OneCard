@@ -29,7 +29,6 @@
     <preference name="target-device" value="universal" />
     <preference name="webviewbounce" value="true" />
     <preference name='phonegap-version' value='cli-9.0.0' />
-    <preference name='swift-version' value='4.2' />
     <!--preference/iOS-->
     <preference name="KeyboardResize" value="true" />
     <preference name="KeyboardStyle" value="dark" />
@@ -47,7 +46,7 @@
     <plugin name="phonegap-plugin-push" source="npm" spec="2.2.3">
         <param name="SENDER_ID" value="678355429347" source="npm" />
     </plugin>
-    <plugin name="cordova-plugin-theme-detection" source="npm" />
+    <plugin name="cordova-plugin-darkmode" source="npm" />
     <!--
     <plugin name="cordova-plugin-x-socialsharing" source="npm" version="5.4.0" />
     <feature name="SocialSharing">
@@ -117,7 +116,4 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-    <config-file parent="UIUserInterfaceStyle" platform="ios" target="*-Info.plist">
-        <string>Light</string>
-    </config-file>
 </widget>
